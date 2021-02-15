@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script src="index.js"></script>
+
+    <title>Greedy Snake</title>
+</head>
+<body>
+    <!-- Start Overlay -->
+    <div id="start-overlay" class="container-fluid">
+        <div id="start-box" class="text-center mt-5 mb-5">
+            <!-- <div id="start-message" class="font-weight-normal"> -->
+                <div class="start-message">
+
+                    <div class="h3"> For direction  : </div>
+
+                    <div class="keyboard">
+                        <div class="instruction">
+                            <p class=" press-button p-2 m-2"> W </p>
+
+                        </div>
+                        <div class="instruction">
+                            <p class="press-button p-2 m-2"> A </p>
+                            <p class="press-button p-2 m-2"> S </p>
+                            <p class="press-button p-2 m-2"> D </p>
+
+                        </div>
+                    </div>
+
+                    <div class="h3"> OR </div>
+
+                    <div class="keyboard">
+                        <div class="instruction">
+                            <p class=" press-button p-2 m-2"> 8 </p>
+
+                        </div>
+                        <div class="instruction">
+                            <p class="press-button p-2 m-2"> 4 </p>
+                            <p class="press-button p-2 m-2"> 5 </p>
+                            <p class="press-button p-2 m-2"> 6 </p>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            <div class="start-message pt-5">
+
+                <div class="h3"> To pause game : </div>
+
+                <div class="keyboard">
+                        <p class="blank-space p-2 m-2">&nbsp SpaceBar &nbsp</p>
+
+                </div>
+            </div>
+            
+            <i id="start-icon" class="material-icons mt-5 mb-0 btn btn-default">play_arrow</i>
+            <div class="h5 font-weight-normal"> Start </div>
+        </div>
+    </div>
+
+    <!-- Lose Overlay -->
+    <div id="lose-overlay" class="container-fluid">
+        <div id="lose-box" class="text-center mt-5 mb-5">
+            <div id="lose-message" class="display-4 font-weight-bold">
+                You Lose !!!
+            </div>
+            <div id="score" class="display-4 font-weight-bold">
+                Your score is <span class="score"></span>.
+            </div>
+            <i id="refresh-icon" class="material-icons mt-5 mb-0 btn btn-default">refresh</i>
+            <div class="h5 font-weight-normal"> Play again </div>
+        </div>
+    </div>
+
+    <!-- Pause Overlay -->
+    <div id="pause-overlay" class="container-fluid">
+        <div id="pause-box" class="text-center mt-5 mb-5">
+            <div id="pause-message" class="display-4 font-weight-bold">
+                Game paused.
+            </div>
+            <div id="score" class="display-4 font-weight-bold">
+                Your current score is <span class="score">0</span>.
+            </div>
+            <i id="play-icon" class="material-icons mt-5 mb-0 btn btn-default">play_circle_filled</i>
+            <div class="h5 font-weight-normal"> Continue </div>
+        </div>
+    </div>
+
+    <!-- Game Field -->
+    <div id="main" class="container-fluid">
+        <div class="row">
+        <div class="col-1"></div>
+        <p id="title" class="col-7 pt-3 pl-2 text-secondary display-1 font-weight-bolder "> Greedy Snake </p>
+        <div class="col-2"></div>
+        <span class="score col-2 align-self-center text-secondary display-3 font-weight-normal"> 0 </span>
+        </div>
+        <div id="game-section" class="text-center">
+            <div id="game-box" >                
+                
+            </div>
+        </div>
+
+        <!-- <div class="text-center">
+        <button id="pause-play" class="btn btn-default mb-2">Pause</button>
+        </div> -->
+
+    </div>
+    
+</body>
+</html>
